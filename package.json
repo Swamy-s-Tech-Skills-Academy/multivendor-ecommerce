@@ -1,5 +1,5 @@
 {
-  "name": "multivendor-ecommercev1",
+  "name": "multivendor-ecommerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "multivendor-ecommercev1": "file:",
+    "multivendor-ecommerce": "file:",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
