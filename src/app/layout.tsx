@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 const barlowFont = Barlow({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["500", "700"],
   variable: "--font-barlow",
 });
 
