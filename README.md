@@ -8,6 +8,7 @@ I am learning creating Multi Vendor eCommerce using Next.js, TypeScript, MySQL, 
 npx create-next-app@latest
 
 npx shadcn@latest init
+npx shadcn@latest add
 ```
 
 ## Reference(s)
