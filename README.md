@@ -6,7 +6,14 @@ I am learning creating Multi Vendor eCommerce using Next.js, TypeScript, MySQL, 
 
 ```powershell
 npx create-next-app@latest
+
+npx shadcn@latest init -d
+
 ```
+
+## Reference(s)
+
+> 1. <https://ui.shadcn.com/>
 
 ## Create a Project
 
