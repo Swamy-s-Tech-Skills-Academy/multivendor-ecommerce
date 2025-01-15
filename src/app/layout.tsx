@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Barlow, Geist, Geist_Mono } from "next/font/google";
+
+import { ClerkProvider } from '@clerk/nextjs'
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,12 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${barlowFont.variable} antialiased`} >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning={true}>
+        <body className={`${geistSans.variable} ${geistMono.variable} ${barlowFont.variable} antialiased`} >
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
