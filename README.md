@@ -11,6 +11,8 @@ npx shadcn@latest init
 npx shadcn@latest add
 
 npm i next-themes --legacy-peer-deps
+
+npm install @clerk/nextjs --legacy-peer-deps
 ```
 
 ## Reference(s)
