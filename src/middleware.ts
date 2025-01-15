@@ -1,6 +1,26 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from 'next/server';
 
-export default clerkMiddleware();
+export default clerkMiddleware(async (auth, req, next) => { // Make the middleware async
+  const protectedRoutes = createRouteMatcher([
+    "/dashboard",
+    "/dashboard/(.*)",
+  ]);
+
+  if (protectedRoutes(req)) {
+    try {
+      await auth().protect();
+    } catch (error) {
+      // Handle auth errors, e.g., redirect to login
+      console.error("Authentication error:", error);
+      return NextResponse.redirect(new URL('/sign-in', req.url)); // Redirect
+    }
+  }
+  // Creating a basic response
+  const response = NextResponse.next();
+
+  return response;
+});
 
 export const config = {
   matcher: [
