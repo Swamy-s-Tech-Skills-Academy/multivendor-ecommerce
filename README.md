@@ -4,6 +4,8 @@ I am learning creating Multi Vendor eCommerce using Next.js, TypeScript, MySQL, 
 
 ```text
 CREATE DATABASE multivendorecommerce;
+USE multivendorecommerce;
+DESCRIBE user;
 
 DATABASE_URL="mysql://root:Sample123$@localhost:3306/multivendorecommerce"
 ```
@@ -23,6 +25,13 @@ npm install @clerk/nextjs --legacy-peer-deps
 npm i -D prisma --legacy-peer-deps
 npx prisma init
 
+npm install @prisma/client@6.2.1 --legacy-peer-deps
+
+npx prisma generate
+
+npx prisma studio
+
+npx prisma migrate dev --name initialversion
 
 ```
 
@@ -30,6 +39,7 @@ npx prisma init
 
 > 1. <https://ui.shadcn.com/>
 > 1. <https://www.prisma.io/docs/getting-started/quickstart-sqlite>
+> 1. <https://hub.docker.com/_/mysql>
 
 ## MySQL Docker Container
 
