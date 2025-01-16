@@ -13,6 +13,9 @@ npx shadcn@latest add
 npm i next-themes --legacy-peer-deps
 
 npm install @clerk/nextjs --legacy-peer-deps
+
+npm i -D prisma --legacy-peer-deps
+npx prisma init
 ```
 
 ## Reference(s)
