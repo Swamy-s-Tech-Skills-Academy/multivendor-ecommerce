@@ -2,6 +2,14 @@
 
 I am learning creating Multi Vendor eCommerce using Next.js, TypeScript, MySQL, Prisma, Clerk from different Video Courses, Books, and Websites.
 
+```text
+CREATE DATABASE multivendorecommerce;
+USE multivendorecommerce;
+DESCRIBE user;
+
+DATABASE_URL="mysql://root:Sample123$@localhost:3306/multivendorecommerce"
+```
+
 ## Few Commands
 
 ```powershell
@@ -13,11 +21,31 @@ npx shadcn@latest add
 npm i next-themes --legacy-peer-deps
 
 npm install @clerk/nextjs --legacy-peer-deps
+
+npm i -D prisma --legacy-peer-deps
+npx prisma init
+
+npm install @prisma/client@6.2.1 --legacy-peer-deps
+
+npx prisma generate
+
+npx prisma studio
+
+npx prisma migrate dev --name initialversion
+
 ```
 
 ## Reference(s)
 
 > 1. <https://ui.shadcn.com/>
+> 1. <https://www.prisma.io/docs/getting-started/quickstart-sqlite>
+> 1. <https://hub.docker.com/_/mysql>
+
+## MySQL Docker Container
+
+```powershell
+docker run -p 3306:3306 -d --name local-mysql -v d:/DataStoresVolumn:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Sample123$ mysql:latest
+```
 
 ## Create a Project
 
